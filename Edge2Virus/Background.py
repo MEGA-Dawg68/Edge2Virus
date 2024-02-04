@@ -9,14 +9,14 @@ def create_blue_screen():
     screen = pygame.display.set_mode((3840, 2160), pygame.RESIZABLE)
     
 
-    # Colours
+    # Feel free to add more colors
     colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (0, 255, 255), (255, 0, 255), (255, 255, 255), (0, 0, 0)]
     color_iterator = itertools.cycle(colors)
 
     # current color
     current_color = next(color_iterator)
 
-    # Fill the screen with the current color
+    
     screen.fill(current_color)
 
     # Update the display
@@ -29,7 +29,7 @@ def create_blue_screen():
     running = True
     while running:
         seconds = (pygame.time.get_ticks() - start_ticks) / 1000 
-        if seconds > 0.1: # 0.1 seconds
+        if seconds > 0.01: # 0.1 seconds
             current_color = next(color_iterator)
             screen.fill(current_color)
             pygame.display.flip()
