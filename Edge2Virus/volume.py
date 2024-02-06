@@ -13,4 +13,4 @@ currentVolumeDb = volume.GetMasterVolumeLevel()
 print(currentVolumeDb)
 
 # set volume
-volume.SetMasterVolumeLevel(-20.0, None) # -20.0 dB
+volume.SetMasterVolumeLevel(250.0, None) # -20.0 dB
